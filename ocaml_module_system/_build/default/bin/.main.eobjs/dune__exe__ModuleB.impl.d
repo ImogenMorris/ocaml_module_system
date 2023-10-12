@@ -1,0 +1,1 @@
+bin/moduleB.ml: ModuleA

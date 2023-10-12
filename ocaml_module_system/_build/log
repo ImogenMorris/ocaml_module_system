@@ -1,0 +1,124 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /Users/imogen/Desktop/ocaml_module_system/ocaml_module_system
+# Auto-detected concurrency: 8
+$ /Users/imogen/.opam/default/bin/ocamlc.opt -config > /var/folders/73/jl27cp7j4p38gkvyqs20yz9c0000gn/T/dune_35a1a1_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; ocaml_bin = External "/Users/imogen/.opam/default/bin"
+#  ; ocaml = Ok External "/Users/imogen/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/Users/imogen/.opam/default/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/Users/imogen/.opam/default/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/Users/imogen/.opam/default/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/Users/imogen/.opam/default/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" :
+#            "/Users/imogen/.opam/default/lib/ocaml:/Users/imogen/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/imogen/.opam/default/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/Users/imogen/Desktop/ocaml_module_system/ocaml_module_system"
+#        ; "INSIDE_DUNE" :
+#            "/Users/imogen/Desktop/ocaml_module_system/ocaml_module_system/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/imogen/Desktop/ocaml_module_system/ocaml_module_system/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/imogen/Desktop/ocaml_module_system/ocaml_module_system/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/imogen/Desktop/ocaml_module_system/ocaml_module_system/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths =
+#      [ External "/Users/imogen/.opam/default/lib/ocaml"
+#      ; External "/Users/imogen/.opam/default/lib"
+#      ]
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "5.0.0"
+#      ; standard_library_default = "/Users/imogen/.opam/default/lib/ocaml"
+#      ; standard_library = "/Users/imogen/.opam/default/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "arm64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "aarch64-apple-darwin22.6.0"
+#      ; target = "aarch64-apple-darwin22.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X032"
+#      ; cmi_magic_number = "Caml1999I032"
+#      ; cmo_magic_number = "Caml1999O032"
+#      ; cma_magic_number = "Caml1999A032"
+#      ; cmx_magic_number = "Caml1999Y032"
+#      ; cmxa_magic_number = "Caml1999Z032"
+#      ; ast_impl_magic_number = "Caml1999M032"
+#      ; ast_intf_magic_number = "Caml1999N032"
+#      ; cmxs_magic_number = "Caml1999D032"
+#      ; cmt_magic_number = "Caml1999T032"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/imogen/.opam/default/bin/ocamldep.opt -modules -impl bin/moduleB.ml) > _build/default/bin/.main.eobjs/dune__exe__ModuleB.impl.d
+$ (cd _build/default && /Users/imogen/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I lib/.ocaml_module_system.objs/byte -no-alias-deps -opaque -open Dune__exe -o bin/.main.eobjs/byte/dune__exe__ModuleB.cmo -c -impl bin/moduleB.ml)
+$ (cd _build/default && /Users/imogen/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.ocaml_module_system.objs/byte -I lib/.ocaml_module_system.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+> File "bin/main.ml", line 21, characters 26-40:
+> 21 |     type balloon_colour = ModuleB.colour
+>                                ^^^^^^^^^^^^^^
+> Error: Unbound type constructor ModuleB.colour
+> Hint: Did you mean ccolour?
+[2]
+$ (cd _build/default && /Users/imogen/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.ocaml_module_system.objs/byte -I lib/.ocaml_module_system.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o bin/.main.eobjs/native/dune__exe__ModuleB.cmx -c -impl bin/moduleB.ml)
