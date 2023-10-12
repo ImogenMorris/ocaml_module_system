@@ -3,7 +3,7 @@ type comfort = {
   fluffy : bool ;
 }
 
-type ccolour = {
+type colour = {
   blue : bool ;
   red : bool ;
 }

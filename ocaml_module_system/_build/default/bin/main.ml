@@ -9,12 +9,12 @@ module type Sweets =
   end
 
 module 
-PartyCakes (P:Party) (Brownie:ModuleA.Baked) (Neopolitan:ModuleB.Dessert with module Bread = Brownie) :
-(Sweets with module Cake = Brownie and module IceCream = Neopolitan) =
+PartyCakes (P:Party) (Brownie:ModuleA.Baked) (MintChoc:ModuleB.Dessert with module Bread = Brownie) :
+(Sweets with module Cake = Brownie and module IceCream = MintChoc) =
   struct
 
     module Cake = Brownie
-    module IceCream = Neopolitan
+    module IceCream = MintChoc
 
     let circle_pillow = P.comfortable.ModuleB.round
     
