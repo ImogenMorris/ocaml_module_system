@@ -1,23 +1,25 @@
-module type Party = sig
-  val comfortable : ModuleB.comfort
+module type Sofa = sig
+  val comfortable : Nice.comfort
 end
 
-module type Sweets =
+module type Party =
   sig
-    module Cake : ModuleA.Baked
-    module IceCream : ModuleB.Dessert
+    module Cake : ChocCake.Baked
+    module IceCream : Nice.Dessert
+
+    val cushion : bool
   end
 
 module 
-PartyCakes (P:Party) (Brownie:ModuleA.Baked) (MintChoc:ModuleB.Dessert with module Bread = Brownie) :
-(Sweets with module Cake = Brownie and module IceCream = MintChoc) =
+SofaParty (S:Sofa) (Brownie:ChocCake.Baked) (MintChoc:Nice.Dessert with module Bread = Brownie) :
+(Party with module Cake = Brownie and module IceCream = MintChoc) =
   struct
 
     module Cake = Brownie
     module IceCream = MintChoc
 
-    let circle_pillow = P.comfortable.ModuleB.round
+    let cushion = S.comfortable.Nice.round
     
-    type balloon_colour = ModuleB.colour
+    type balloon_colour = Nice.colour
 
   end

@@ -1,1 +1,1 @@
-bin/main.ml: ModuleA ModuleB
+bin/main.ml: ChocCake Nice

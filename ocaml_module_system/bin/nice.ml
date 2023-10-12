@@ -10,7 +10,7 @@ type colour = {
 
 module type Dessert =
   sig
-    module Bread : ModuleA.Baked
+    module Bread : ChocCake.Baked
     val sweet : bool
     type quantity = int
   end

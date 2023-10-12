@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /Users/imogen/Desktop/ocaml_module_system/ocaml_module_system
 # Auto-detected concurrency: 8
-$ /Users/imogen/.opam/default/bin/ocamlc.opt -config > /var/folders/73/jl27cp7j4p38gkvyqs20yz9c0000gn/T/dune_2ea18f_output
+$ /Users/imogen/.opam/default/bin/ocamlc.opt -config > /var/folders/73/jl27cp7j4p38gkvyqs20yz9c0000gn/T/dune_ae7dbf_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -113,16 +113,13 @@ $ /Users/imogen/.opam/default/bin/ocamlc.opt -config > /var/folders/73/jl27cp7j4
 #      }
 #  }
 $ (cd _build/default && /Users/imogen/.opam/default/bin/ocamldep.opt -modules -impl bin/main.ml) > _build/default/bin/.main.eobjs/dune__exe__Main.impl.d
-$ (cd _build/default && /Users/imogen/.opam/default/bin/ocamldep.opt -modules -impl bin/moduleB.ml) > _build/default/bin/.main.eobjs/dune__exe__ModuleB.impl.d
-$ (cd _build/default && /Users/imogen/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I bin/.main.eobjs/byte -I lib/.ocaml_module_system.objs/byte -no-alias-deps -opaque -open Dune__exe -o bin/.main.eobjs/byte/dune__exe__ModuleB.cmo -c -impl bin/moduleB.ml)
-$ (cd _build/default && /Users/imogen/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.ocaml_module_system.objs/byte -I lib/.ocaml_module_system.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o bin/.main.eobjs/native/dune__exe__ModuleB.cmx -c -impl bin/moduleB.ml)
 $ (cd _build/default && /Users/imogen/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.ocaml_module_system.objs/byte -I lib/.ocaml_module_system.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
-> File "bin/main.ml", line 19, characters 8-21:
-> 19 |     let circle_pillow = P.comfortable.ModuleB.round
->              ^^^^^^^^^^^^^
-> Error (warning 32 [unused-value-declaration]): unused value circle_pillow.
-> File "bin/main.ml", line 21, characters 4-40:
-> 21 |     type balloon_colour = ModuleB.colour
->          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> File "bin/main.ml", line 10, characters 4-22:
+> 10 |     val cushion : bool
+>          ^^^^^^^^^^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value cushion.
+> File "bin/main.ml", line 23, characters 4-37:
+> 23 |     type balloon_colour = Nice.colour
+>          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 > Error (warning 34 [unused-type-declaration]): unused type balloon_colour.
 [2]
