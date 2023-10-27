@@ -13,12 +13,14 @@ module type Level =
 
 module type Cocoa =
   sig
-    val choc : string -> unit
+    type thing
+    val choc : thing -> unit
     module Chocness : Level
   end
 
-  module Chocolatey : Cocoa =
+module Chocolatey : Cocoa =
   struct
+    type thing = string
     let s = "is good with chocolate."
     let choc a = Printf.printf "%s %s" a s
     module Chocness =

@@ -12,13 +12,13 @@ module type Party =
 
 module 
 SofaParty (S:Sofa) (Brownie:ChocCake.Baked) (MintChoc:Nice.Dessert with module Bread = Brownie) :
-(Party with module Cake = Brownie and module IceCream = MintChoc) =
+(Party) =
   struct
 
     module Cake = Brownie
     module IceCream = MintChoc
 
-    let cushion = S.comfortable.Nice.round
+    let cushion = S.comfortable.round
     
     type balloon_colour = Nice.colour
 

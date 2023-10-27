@@ -3,6 +3,8 @@ type comfort = {
   fluffy : bool ;
 }
 
+let roundness x = x.round
+
 type colour = {
   blue : bool ;
   red : bool ;
